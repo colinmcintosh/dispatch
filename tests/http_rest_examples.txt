@@ -1,0 +1,21 @@
+GET /api/v1/link_layer/neighbors?hostname=switch01
+
+GET /api/v1/cpu/load_average?hostname=switch01&cpu-id=0
+
+GET /api/v1/interfaces/name?hostname=switch01&interfaces-ip_address=192.168.1.1
+
+
+
+
+PUT /api/v1/hostname.interfaces.state
+{
+    "filter": {
+        "hostname": "",
+        "interfaces": {
+            "ip_address": "192.168.1.1"
+        },
+    },
+    "state": "up"
+}
+
+
